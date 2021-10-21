@@ -18,6 +18,7 @@
   - [Basic React Stuff](#basic-react-stuff)
   - [Advanced React Stuff](#advanced-react-stuff)
   - [twin.macro](#twinmacro)
+- [using locally](#using-locally)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -74,3 +75,10 @@
 |     `styled→` | `styled component`          |
 |          `tw` | `twin object`               |
 |               |
+
+## using locally
+
+by putting a symlink to the path of the local repo you can use it as an extension
+`ln -s /path/to/original/daren-vscode-snippets /path/to/link/daren-vscode-snippets`
+
+the .vscode extension path is at path: `/Users/{username}/.vscode/extensions/`
