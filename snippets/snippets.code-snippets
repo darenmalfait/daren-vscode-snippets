@@ -1,0 +1,262 @@
+{
+  "if statement": {
+    "prefix": "if",
+    "body": [
+      "if ($0) {",
+      "  ",
+      "}"
+    ]
+  },
+  "Basic Function": {
+    "prefix": "func",
+    "body": [
+      "function $1($0) {",
+      "  ",
+      "}",
+    ],
+    "description": "Basic function"
+  },
+  "async function": {
+    "prefix": "afunc",
+    "body": [
+      "async function $1($0) {",
+      "  ",
+      "}"
+    ]
+  },
+  "Switch Statement": {
+    "prefix": "switch",
+    "body": [
+      "switch (${0:key}) {",
+      "  case 'value': {",
+      "    ",
+      "    break",
+      "  }",
+      "  default: {",
+      "    break",
+      "  }",
+      "}"
+    ]
+  },
+  "import x from '": {
+    "prefix": "imp",
+    "body": "import ${0:*} from '$1'"
+  },
+  "try/catch": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (error) {",
+      "  ",
+      "}"
+    ]
+  },
+  "Function Component": {
+    "prefix": "rfc",
+    "body": [
+      "import * as React from 'react';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "function ${1:Component}() {",
+      "console.log('state handlers');",
+      "",
+      "  return <div />",
+      "};",
+      "",
+      "${1:Component}.propTypes = {};",
+      "",
+      "export { ${1:Component} };"
+    ],
+    "description": "Create a stateless component with proptypes"
+  },
+  "useState": {
+    "prefix": "useState",
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = React.useState($2);$0"
+    ],
+    "description": "useState handler"
+  },
+  "useEffect": {
+    "prefix": "useEffect",
+    "body": [
+      "React.useEffect(() => {",
+      "\t$1",
+      "}, [${3}]);$0"
+    ],
+    "description": "useEffect handler"
+  },
+  "useEffectWithCleanUp": {
+    "prefix": "useEffectClean",
+    "body": [
+      "React.useEffect(() => {",
+      "\t$1",
+      "\n\treturn () => {",
+      "\t\t$2",
+      "\t}",
+      "}, [${3}]);$0"
+    ],
+    "description": "useEffect with cleanup function"
+  },
+  "useRef": {
+    "prefix": "useRef",
+    "body": [
+      "const ${1:anyRef} = React.useRef($2)$0"
+    ],
+    "description": "useRef handler"
+  },
+  "useCallback": {
+    "prefix": "useCallback",
+    "body": [
+      "const ${1:memoizedCallback} = React.useCallback(",
+      "  () => {",
+      "    ${3:callback}",
+      "  },",
+      "  [${2:input}],",
+      ")"
+    ],
+    "description": [
+      "useCallback handler"
+    ]
+  },
+  "useMemo": {
+    "prefix": "useMemo",
+    "body": [
+      "const ${1:memoizedValue} = React.useMemo(",
+      "  () => {",
+      "    ${3}",
+      "  },",
+      "  [${2:deps}])",
+    ],
+    "description": [
+      "useMemo handler"
+    ]
+  },
+  "useReducer": {
+    "prefix": "useReducer",
+    "body": [
+      "const initialState = { count: 0 };",
+      "",
+      "type ACTIONTYPE =",
+      "  | { type: \"increment\"; payload: number }",
+      "  | { type: \"decrement\"; payload: string };",
+      "",
+      "function ${1:reducer}(state, action) {",
+      "  switch (action.type) {",
+      "    case \"increment\":",
+      "      return { count: state.count + action.payload };",
+      "    case \"decrement\":",
+      "      return { count: state.count - Number(action.payload) };",
+      "    default:",
+      "      throw new Error();",
+      "  }",
+      "}",
+      "",
+      "const [state, dispatch] = React.useReducer(${1:reducer}, ${2:initialState})"
+    ],
+    "description": [
+      "useReducer handle"
+    ]
+  },
+  "ContextProvider": {
+    "prefix": "ContextProvider",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "const ${1:App}Context = React.createContext(null);",
+      "${1:App}Context.displayName = '${1:App}Context';",
+      "",
+      "// import { ${1:App}Provider } from \"path-to-context/${1:App}Context\"",
+      "// use <${1:App}Provider> as a wrapper around the part you need the context for",
+      "export function ${1:App}Provider({ children }) {",
+      "  // TODO: provider logic",
+      "  return <${1:App}Context.Provider value={{}}>{children}</${1:App}Context.Provider>;",
+      "}",
+      "",
+      "// import { use${1:App} } fron \"path-to-context/${1:App}Context\"",
+      "// within functional component",
+      "// const { sessionToken, ...${1:App}Context } = use${1:App}();",
+      "export function use${1:App}() {",
+      "  const context = React.useContext(${1:App}Context);",
+      "",
+      "  if (!context) {",
+      "    throw new Error('You should use use${1:App} within an ${1:App}Context');",
+      "  }",
+      "",
+      "  return context;",
+      "}",
+      ""
+    ],
+    "description": "Creates a boilerplate for using React Context and useContext"
+  },
+  "Custom Hook": {
+    "prefix": "hook",
+    "body": [
+      "import * as React from 'react'",
+      "",
+      "export function use${1:Hook}(){",
+      "  const [isLoaded, setIsLoaded] = React.useState(false)",
+      "",
+      "  const handleImageOnLoad = () => {",
+      "    setIsLoaded(true)",
+      "  }",
+      "",
+      "  return { handleImageOnLoad }",
+      "}",
+    ]
+  },
+  "Is Development": {
+    "prefix": "isdev",
+    "body": [
+      "if (__DEV__) {",
+      "  ${1:Component}.displayName = '${1:Component}';",
+      "}",
+    ]
+  },
+  "Add react import": {
+    "prefix": "react",
+    "body": "import * as React from 'react'",
+    "description": "Add react import"
+  },
+  "Add twin imports": {
+    "prefix": "imptwincss",
+    "body": "import tw, { css, styled } from 'twin.macro'",
+    "description": "Add twin imports"
+  },
+  "Add twin tw imports": {
+    "prefix": "imptwin",
+    "body": "import tw from 'twin.macro'",
+    "description": "Add twin tw imports"
+  },
+  "Add twin styled import": {
+    "prefix": "impstyled",
+    "body": "import tw, { styled } from 'twin.macro'",
+    "description": "Add twin styled import"
+  },
+  "Create tw exported component": {
+    "prefix": "twin",
+    "body": [
+      "export const ${1:StyledComponent} = tw.${2:div}`",
+      "  ${0}",
+      "`;"
+    ],
+    "description": "Add a new component using twin"
+  },
+  "Create styled exported component": {
+    "prefix": "styled",
+    "body": [
+      "export const ${1:StyledComponent} = styled.${2:div}(() => [",
+      "  css`",
+      "    ${tw`${0}`}",
+      "  `,",
+      "  tw``,",
+      "]);",
+    ],
+    "description": "Add a new component using styled"
+  },
+  "Create twin object": {
+    "prefix": "tw",
+    "body": "tw`${0}`",
+    "description": "Add twin object"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "daren-vscode-snippets",
+  "displayName": "daren-vscode-snippets",
+  "description": "My personal javascript and typescript snippets for vscode",
+  "version": "0.0.1",
+  "keywords": [
+    "snippets",
+    "vscode",
+    "hooks",
+    "react"
+  ],
+  "author": "Daren Malfait <me@daren.be> (https://daren.be)",
+  "license": "MIT",
+  "categories": [
+    "Snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darenmalfait/daren-vscode-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/darenmalfait/daren-vscode-snippets/issues"
+  },
+  "homepage": "https://github.com/darenmalfait/daren-vscode-snippets#readme",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.ts.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.ts.code-snippets"
+      }
+    ]
+  }
+}
