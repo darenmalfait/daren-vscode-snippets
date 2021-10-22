@@ -79,6 +79,6 @@
 ## using locally
 
 by putting a symlink to the path of the local repo you can use it as an extension
-`ln -s /path/to/original/daren-vscode-snippets /path/to/link/daren-vscode-snippets`
+`ln -s /path/to/original/extensions /path/to/link/daren-vscode-snippets`
 
-the .vscode extension path is at path: `/Users/{username}/.vscode/extensions/`
+the .vscode extension path is at path: `~/.vscode/extensions/`

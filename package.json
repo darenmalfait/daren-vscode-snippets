@@ -9,7 +9,11 @@
     "hooks",
     "react"
   ],
+  "engines": {
+    "vscode": "^1.57.0"
+  },
   "author": "Daren Malfait <me@daren.be> (https://daren.be)",
+  "publisher": "Daren",
   "license": "MIT",
   "categories": [
     "Snippets"

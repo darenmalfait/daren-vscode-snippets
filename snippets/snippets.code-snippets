@@ -12,7 +12,7 @@
     "body": [
       "function $1($0) {",
       "  ",
-      "}",
+      "}"
     ],
     "description": "Basic function"
   },
@@ -38,7 +38,7 @@
       "}"
     ]
   },
-  "import x from '": {
+  "import x from y": {
     "prefix": "imp",
     "body": "import ${0:*} from '$1'"
   },
@@ -126,7 +126,7 @@
       "  () => {",
       "    ${3}",
       "  },",
-      "  [${2:deps}])",
+      "  [${2:deps}])"
     ],
     "description": [
       "useMemo handler"
@@ -202,7 +202,7 @@
       "  }",
       "",
       "  return { handleImageOnLoad }",
-      "}",
+      "}"
     ]
   },
   "Is Development": {
@@ -210,7 +210,7 @@
     "body": [
       "if (__DEV__) {",
       "  ${1:Component}.displayName = '${1:Component}';",
-      "}",
+      "}"
     ]
   },
   "Add react import": {
@@ -250,7 +250,7 @@
       "    ${tw`${0}`}",
       "  `,",
       "  tw``,",
-      "]);",
+      "]);"
     ],
     "description": "Add a new component using styled"
   },
