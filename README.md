@@ -23,13 +23,24 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Supported languages (file extensions)
+
 - JavaScript (.js)
 - JavaScript React (.jsx)
 - TypeScript (.ts)
 - TypeScript React (.tsx)
+
+## Local dev
+
+symlink the package to the vscode extension folder with:
+
+```bash
+ln -s ~/path/to/package/ ~/.vscode/extensions/daren-vscode-snippets
+```
+
 ## Features
 
 ### Basic Javascript Stuff
+
 |    Prefix | Method                                     |
 | --------: | ------------------------------------------ |
 |  `react→` | `import react`                             |
@@ -62,7 +73,6 @@
 | `ContextProvider→` | `Custom hook that contains all basics for useContext` |
 |                    |
 
-
 ### twin.macro
 
 |        Prefix | Method                      |
@@ -78,7 +88,8 @@
 
 ## using locally
 
-by putting a symlink to the path of the local repo you can use it as an extension
+by putting a symlink to the path of the local repo you can use it as an
+extension
 `ln -s /path/to/original/extensions /path/to/link/daren-vscode-snippets`
 
 the .vscode extension path is at path: `~/.vscode/extensions/`
