@@ -1,28 +1,16 @@
 {
   "if statement": {
     "prefix": "if",
-    "body": [
-      "if ($0) {",
-      "  ",
-      "}"
-    ]
+    "body": ["if ($0) {", "  ", "}"]
   },
   "Basic Function": {
     "prefix": "func",
-    "body": [
-      "function $1($0) {",
-      "  ",
-      "}"
-    ],
+    "body": ["function $1($0) {", "  ", "}"],
     "description": "Basic function"
   },
   "async function": {
     "prefix": "afunc",
-    "body": [
-      "async function $1($0) {",
-      "  ",
-      "}"
-    ]
+    "body": ["async function $1($0) {", "  ", "}"]
   },
   "Switch Statement": {
     "prefix": "switch",
@@ -44,47 +32,36 @@
   },
   "try/catch": {
     "prefix": "try",
-    "body": [
-      "try {",
-      "  $0",
-      "} catch (error) {",
-      "  ",
-      "}"
-    ]
+    "body": ["try {", "  $0", "} catch (error) {", "  ", "}"]
   },
   "Function Component": {
     "prefix": "rfc",
     "body": [
       "import * as React from 'react'",
+      "import PropTypes from 'prop-types'",
       "",
-      "interface ${1:Component}Props {}",
+      "function ${1:Component}() {",
+      "console.log('state handlers')",
       "",
-      "function ${1:Component}({}: ${1:Component}Props) {",
-      "  return (",
-      "    <div>",
-      "",
-      "    </div>",
-      "  )",
+      "  return <div />",
       "}",
+      "",
+      "${1:Component}.propTypes = {}",
       "",
       "export { ${1:Component} }"
     ],
-    "description": "Create a functional component with proptypes"
+    "description": "Create a stateless component with proptypes"
   },
   "useState": {
     "prefix": "useState",
     "body": [
-      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = React.useState<${2:any}>($3)$0"
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = React.useState($2)$0"
     ],
     "description": "useState handler"
   },
   "useEffect": {
     "prefix": "useEffect",
-    "body": [
-      "React.useEffect(() => {",
-      "\t$1",
-      "}, [${3}])$0"
-    ],
+    "body": ["React.useEffect(() => {", "\t$1", "}, [${3}])$0"],
     "description": "useEffect handler"
   },
   "useEffectWithCleanUp": {
@@ -99,39 +76,9 @@
     ],
     "description": "useEffect with cleanup function"
   },
-  "useLayoutEffect": {
-    "prefix": "useLayoutEffect",
-    "body": [
-      "React.useLayoutEffect(() => {",
-      "\t$1",
-      "}, [${3}])$0"
-    ],
-    "description": "useLayoutEffect handler"
-  },
-  "useLayoutEffectWithCleanUp": {
-    "prefix": "useLayoutEffectClean",
-    "body": [
-      "React.useLayoutEffect(() => {",
-      "\t$1",
-      "\n\treturn () => {",
-      "\t\t$2",
-      "\t}",
-      "}, [${3}])$0"
-    ],
-    "description": "useLayoutEffect with cleanup function"
-  },
   "useRef": {
     "prefix": "useRef",
-    "body": [
-      "const ${1:ref} = React.useRef<HTMLDivElement>(${3:null})$0"
-    ],
-    "description": "useRef handler"
-  },
-  "useRefMutable": {
-    "prefix": "useRef",
-    "body": [
-      "const ${1:ref} = React.useRef<${2:number} | null>(${3:null})$0"
-    ],
+    "body": ["const ${1:anyRef} = React.useRef($2)$0"],
     "description": "useRef handler"
   },
   "useCallback": {
@@ -144,9 +91,7 @@
       "  [${2:input}],",
       ")"
     ],
-    "description": [
-      "useCallback handler"
-    ]
+    "description": ["useCallback handler"]
   },
   "useMemo": {
     "prefix": "useMemo",
@@ -157,9 +102,7 @@
       "  },",
       "  [${2:deps}])"
     ],
-    "description": [
-      "useMemo handler"
-    ]
+    "description": ["useMemo handler"]
   },
   "useReducer": {
     "prefix": "useReducer",
@@ -170,7 +113,7 @@
       "  | { type: \"increment\" payload: number }",
       "  | { type: \"decrement\" payload: string }",
       "",
-      "function ${1:reducer}(state: typeof initialState, action: ACTIONTYPE) {",
+      "function ${1:reducer}(state, action) {",
       "  switch (action.type) {",
       "    case \"increment\":",
       "      return { count: state.count + action.payload }",
@@ -183,29 +126,19 @@
       "",
       "const [state, dispatch] = React.useReducer(${1:reducer}, ${2:initialState})"
     ],
-    "description": [
-      "useReducer handle"
-    ]
+    "description": ["useReducer handle"]
   },
   "ContextProvider": {
     "prefix": "ContextProvider",
     "body": [
       "import * as React from 'react'",
       "",
-      "interface ${1:App}ContextProps {",
-      "  [key: string]: any",
-      "}",
-      "",
-      "const ${1:App}Context = React.createContext<${1:App}ContextProps | null>(null)",
+      "const ${1:App}Context = React.createContext(null)",
       "${1:App}Context.displayName = '${1:App}Context'",
-      "",
-      "interface ${1:App}ProviderProps {",
-      "  children: React.ReactNode",
-      "}",
       "",
       "// import { ${1:App}Provider } from \"path-to-context/${1:App}Context\"",
       "// use <${1:App}Provider> as a wrapper around the part you need the context for",
-      "function ${1:App}Provider({ children }: ${1:App}ProviderProps) {",
+      "function ${1:App}Provider({ children }) {",
       "  // TODO: provider logic",
       "  return <${1:App}Context.Provider value={{}}>{children}</${1:App}Context.Provider>",
       "}",
@@ -213,7 +146,7 @@
       "// import { use${1:App} } fron \"path-to-context/${1:App}Context\"",
       "// within functional component",
       "// const { sessionToken, ...${1:App}Context } = use${1:App}()",
-      "function use${1:App}(): ${1:App}ContextProps {",
+      "function use${1:App}() {",
       "  const context = React.useContext(${1:App}Context)",
       "",
       "  if (!context) {",
@@ -232,11 +165,8 @@
     "body": [
       "import * as React from 'react'",
       "",
-      "interface ${1:Hook}Props {",
-      "}",
-      "",
-      "export function use${1:Hook}(): ${1:Hook}Props {",
-      "  const [isLoaded, setIsLoaded] = React.useState<boolean>(false)",
+      "export function use${1:Hook}(){",
+      "  const [isLoaded, setIsLoaded] = React.useState(false)",
       "",
       "  const handleImageOnLoad = () => {",
       "    setIsLoaded(true)",
@@ -276,11 +206,7 @@
   },
   "Create tw exported component": {
     "prefix": "twin",
-    "body": [
-      "export const ${1:StyledComponent} = tw.${2:div}`",
-      "  ${0}",
-      "`"
-    ],
+    "body": ["export const ${1:StyledComponent} = tw.${2:div}`", "  ${0}", "`"],
     "description": "Add a new component using twin"
   },
   "Create styled exported component": {

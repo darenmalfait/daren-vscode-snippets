@@ -13,10 +13,12 @@
 
 - [Table of Contents](#table-of-contents)
 - [Supported languages (file extensions)](#supported-languages-file-extensions)
+- [Local dev](#local-dev)
 - [Features](#features)
   - [Basic Javascript Stuff](#basic-javascript-stuff)
   - [Basic React Stuff](#basic-react-stuff)
   - [Advanced React Stuff](#advanced-react-stuff)
+  - [NextJS stuff](#nextjs-stuff)
   - [twin.macro](#twinmacro)
 - [using locally](#using-locally)
 
@@ -72,6 +74,22 @@ ln -s ~/path/to/package/ ~/.vscode/extensions/daren-vscode-snippets
 | -----------------: | ----------------------------------------------------- |
 | `ContextProvider→` | `Custom hook that contains all basics for useContext` |
 |                    |
+
+### NextJS stuff
+
+|                Prefix | Method                                       |
+| --------------------: | -------------------------------------------- |
+|           `nextpage→` | `NextJS getServerSideProps React FC with TS` |
+|       `nextdocument→` | `Custom _document Component`                 |
+|            `nextapp→` | `Custom _app Component`                      |
+|   `nexterrordefault→` | `Default error Component`                    |
+|    `nexterrorcustom→` | `Custom error Component`                     |
+|            `next404→` | `Custom 404 NotFound Page`                   |
+|            `next500→` | `Custom 500 ServerError Page`                |
+|    `nextgetSSRProps→` | `Async function getServerSideProps`          |
+| `nextgetStaticProps→` | `Async function getStaticProps`              |
+| `nextgetStaticPaths→` | `Async function getStaticPaths`              |
+|            `nextapi→` | `API Routes`                                 |
 
 ### twin.macro
 

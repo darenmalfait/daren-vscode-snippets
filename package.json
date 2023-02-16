@@ -2,7 +2,7 @@
   "name": "daren-vscode-snippets",
   "displayName": "daren-vscode-snippets",
   "description": "My personal javascript and typescript snippets for vscode",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": [
     "snippets",
     "vscode",
@@ -30,19 +30,35 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/javascript/react.json"
       },
       {
         "language": "javascriptreact",
-        "path": "./snippets/snippets.code-snippets"
+        "path": "./snippets/javascript/react.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/snippets.ts.code-snippets"
+        "path": "./snippets/typescript/react.json"
       },
       {
         "language": "typescriptreact",
-        "path": "./snippets/snippets.ts.code-snippets"
+        "path": "./snippets/typescript/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript/nextjs.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/javascript/nextjs.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript/nextjs.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/typescript/nextjs.json"
       }
     ]
   }
