@@ -19,7 +19,6 @@
   - [Basic React Stuff](#basic-react-stuff)
   - [Advanced React Stuff](#advanced-react-stuff)
   - [NextJS stuff](#nextjs-stuff)
-  - [twin.macro](#twinmacro)
 - [using locally](#using-locally)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -90,19 +89,6 @@ ln -s ~/path/to/package/ ~/.vscode/extensions/daren-vscode-snippets
 | `nextgetStaticProps→` | `Async function getStaticProps`              |
 | `nextgetStaticPaths→` | `Async function getStaticPaths`              |
 |            `nextapi→` | `API Routes`                                 |
-
-### twin.macro
-
-|        Prefix | Method                      |
-| ------------: | --------------------------- |
-|    `imptwin→` | `import tw`                 |
-| `imptwincss→` | `import tw, styled and css` |
-|    `imptwin→` | `import tw`                 |
-|  `impstyled→` | `import tw, styled`         |
-|       `twin→` | `twin component`            |
-|     `styled→` | `styled component`          |
-|          `tw` | `twin object`               |
-|               |
 
 ## using locally
 

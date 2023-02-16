@@ -188,42 +188,5 @@
     "prefix": "react",
     "body": "import * as React from 'react'",
     "description": "Add react import"
-  },
-  "Add twin imports": {
-    "prefix": "imptwincss",
-    "body": "import tw, { css, styled } from 'twin.macro'",
-    "description": "Add twin imports"
-  },
-  "Add twin tw imports": {
-    "prefix": "imptwin",
-    "body": "import tw from 'twin.macro'",
-    "description": "Add twin tw imports"
-  },
-  "Add twin styled import": {
-    "prefix": "impstyled",
-    "body": "import tw, { styled } from 'twin.macro'",
-    "description": "Add twin styled import"
-  },
-  "Create tw exported component": {
-    "prefix": "twin",
-    "body": ["export const ${1:StyledComponent} = tw.${2:div}`", "  ${0}", "`"],
-    "description": "Add a new component using twin"
-  },
-  "Create styled exported component": {
-    "prefix": "styled",
-    "body": [
-      "export const ${1:StyledComponent} = styled.${2:div}(() => [",
-      "  css`",
-      "    ${tw`${0}`}",
-      "  `,",
-      "  tw``,",
-      "])"
-    ],
-    "description": "Add a new component using styled"
-  },
-  "Create twin object": {
-    "prefix": "tw",
-    "body": "tw`${0}`",
-    "description": "Add twin object"
   }
 }
