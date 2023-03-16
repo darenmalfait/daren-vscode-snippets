@@ -26,3 +26,4 @@ yarn.lock
 
 # Yarn Integrity file
 .yarn-integrity
+*.vsix

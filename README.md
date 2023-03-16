@@ -20,6 +20,7 @@
   - [Advanced React Stuff](#advanced-react-stuff)
   - [NextJS stuff](#nextjs-stuff)
 - [using locally](#using-locally)
+- [Build VSIX](#build-vsix)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -97,3 +98,10 @@ extension
 `ln -s /path/to/original/extensions /path/to/link/daren-vscode-snippets`
 
 the .vscode extension path is at path: `~/.vscode/extensions/`
+
+## Build VSIX
+
+```bash
+npm install -g vsce
+vsce package
+```
