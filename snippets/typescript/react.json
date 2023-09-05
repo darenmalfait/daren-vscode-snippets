@@ -39,17 +39,13 @@
     "body": [
       "import * as React from 'react'",
       "",
-      "interface ${1:Component}Props {}",
-      "",
-      "function ${1:Component}({}: ${1:Component}Props) {",
+      "export function ${1:Component}() {",
       "  return (",
       "    <div>",
       "",
       "    </div>",
       "  )",
-      "}",
-      "",
-      "export { ${1:Component} }"
+      "}"
     ],
     "description": "Create a functional component with proptypes"
   },
