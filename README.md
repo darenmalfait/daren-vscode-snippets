@@ -95,7 +95,8 @@ ln -s ~/path/to/package/ ~/.vscode/extensions/daren-vscode-snippets
 
 by putting a symlink to the path of the local repo you can use it as an
 extension
-`ln -s /path/to/original/extensions /path/to/link/daren-vscode-snippets`
+
+`ln -s /absolute/path/to/original/extensions /absolute/path/to/.vscode/extensions/daren-vscode-snippets`
 
 the .vscode extension path is at path: `~/.vscode/extensions/`
 
