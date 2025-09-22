@@ -1,65 +1,68 @@
 {
-  "name": "daren-vscode-snippets",
-  "displayName": "daren-vscode-snippets",
-  "description": "My personal javascript and typescript snippets for vscode",
-  "version": "1.0.0",
-  "keywords": [
-    "snippets",
-    "vscode",
-    "hooks",
-    "react"
-  ],
-  "engines": {
-    "vscode": "^1.57.0"
-  },
-  "author": "Daren Malfait <me@daren.be> (https://daren.be)",
-  "publisher": "Daren",
-  "license": "MIT",
-  "categories": [
-    "Snippets"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/darenmalfait/daren-vscode-snippets"
-  },
-  "bugs": {
-    "url": "https://github.com/darenmalfait/daren-vscode-snippets/issues"
-  },
-  "homepage": "https://github.com/darenmalfait/daren-vscode-snippets#readme",
-  "contributes": {
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./snippets/javascript/react.json"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./snippets/javascript/react.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/typescript/react.json"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/typescript/react.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./snippets/javascript/nextjs.json"
-      },
-      {
-        "language": "javascriptreact",
-        "path": "./snippets/javascript/nextjs.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./snippets/typescript/nextjs.json"
-      },
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/typescript/nextjs.json"
-      }
-    ]
-  }
+	"name": "daren-vscode-snippets",
+	"displayName": "daren-vscode-snippets",
+	"description": "My personal javascript and typescript snippets for vscode",
+	"version": "1.0.0",
+	"keywords": [
+		"snippets",
+		"vscode",
+		"hooks",
+		"react"
+	],
+	"engines": {
+		"vscode": "^1.57.0"
+	},
+	"author": "Daren Malfait <me@daren.be> (https://daren.be)",
+	"publisher": "Daren",
+	"license": "MIT",
+	"categories": [
+		"Snippets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/darenmalfait/daren-vscode-snippets"
+	},
+	"bugs": {
+		"url": "https://github.com/darenmalfait/daren-vscode-snippets/issues"
+	},
+	"homepage": "https://github.com/darenmalfait/daren-vscode-snippets#readme",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript/react.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript/react.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript/react.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescript/react.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript/nextjs.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/javascript/nextjs.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript/nextjs.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/typescript/nextjs.json"
+			}
+		]
+	},
+	"__metadata": {
+		"size": 149371
+	}
 }
